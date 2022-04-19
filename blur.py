@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('Lena.png')
+img = cv2.imread('real1.jpeg')
 rows, cols = img.shape[:2]
 
 #kernel blurring
@@ -21,7 +21,7 @@ output_gauss = cv2.GaussianBlur(img,(5,5), 1)
 output_med = cv2.medianBlur(img, 5)
 
 # #bilateral blur
-output_bi = cv2.bilateralFilter(img, 10, 6,6)
+output_bi = cv2.bilateralFilter(img, 10, 3,3)
 
 cv2.imshow('kernel_blur', output_kernel)
 cv2.imshow('blur function', output_blur)
